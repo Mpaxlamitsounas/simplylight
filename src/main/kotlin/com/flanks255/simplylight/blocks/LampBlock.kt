@@ -30,12 +30,12 @@ class LampBlock(name: String,private val default: Boolean): LampBase(name) {
     }
 
     override fun neighborChanged(state: IBlockState, worldIn: World, pos: BlockPos, blockIn: Block, fromPos: BlockPos) {
-        val powered = worldIn.isBlockIndirectlyGettingPowered(pos) > 0
+        val powered = worldIn.isBlockPowered(pos)
         worldIn.setBlockState(pos, state.withProperty(ON, default != powered))
     }
 
     override fun onBlockAdded(worldIn: World, pos: BlockPos, state: IBlockState) {
-        val powered = worldIn.isBlockIndirectlyGettingPowered(pos) > 0
+        val powered = worldIn.isBlockPowered(pos)
         worldIn.setBlockState(pos, state.withProperty(ON, default != powered))
     }
 

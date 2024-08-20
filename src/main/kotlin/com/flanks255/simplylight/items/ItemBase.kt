@@ -6,7 +6,7 @@ import net.minecraft.item.Item
 //just in case i need any pure items...
 class ItemBase(val name: String): Item() {
     init {
-        setUnlocalizedName(name)
+        setTranslationKey(name)
         setRegistryName(name)
     }
 

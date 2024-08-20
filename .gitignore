@@ -6,4 +6,3 @@ out/
 run/
 .gradle/
 gradle/
-gradle.properties

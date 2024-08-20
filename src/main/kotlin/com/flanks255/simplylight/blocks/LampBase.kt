@@ -16,7 +16,7 @@ open class LampBase(val name: String): Block(Material.REDSTONE_LIGHT){
     init {
         super.setLightLevel(1.0f)
         super.setHardness(1.0f)
-        super.setUnlocalizedName(simplylight.MODID+"."+name)
+        super.setTranslationKey(simplylight.MODID+"."+name)
         super.setHarvestLevel("pickaxe", 0)
 
         setRegistryName(name)

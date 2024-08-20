@@ -26,11 +26,11 @@ class BaseItemBlock(id: Block): ItemBlock(id) {
     @SideOnly(Side.CLIENT)
     override fun addInformation(stack: ItemStack, worldIn: World?, tooltip: MutableList<String>, flagIn: ITooltipFlag) {
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) {
-            tooltip.add(I18n.format(block.unlocalizedName + ".info"))
-            if (hasTranslation(block.unlocalizedName + ".info2"))
-                tooltip.add(I18n.format(block.unlocalizedName + ".info2"))
-            if (hasTranslation(block.unlocalizedName + ".info3"))
-                tooltip.add(I18n.format(block.unlocalizedName + ".info3"))
+            tooltip.add(I18n.format(block.translationKey + ".info"))
+            if (hasTranslation(block.translationKey + ".info2"))
+                tooltip.add(I18n.format(block.translationKey + ".info2"))
+            if (hasTranslation(block.translationKey + ".info3"))
+                tooltip.add(I18n.format(block.translationKey + ".info3"))
         } else {
             tooltip.add(fallbackString("simplylight.shift", "Press <§6§oShift§r> for info."))
         }
