@@ -47,9 +47,9 @@ object Lightbulb: RotatableLamp("lightbulb"){
     override val AABB_SOUTH = AxisAlignedBB(0.375, 0.375, 0.325, 0.625, 0.625, 0.0)
     override fun getCollisionBoundingBox(blockState: IBlockState?, worldIn: IBlockAccess?, pos: BlockPos?): AxisAlignedBB? = null
     override fun getLightValue(state: IBlockState?, world: IBlockAccess?, pos: BlockPos?): Int = 14
-    override fun canRenderInLayer(state: IBlockState, layer: BlockRenderLayer): Boolean {
-        return (layer == BlockRenderLayer.TRANSLUCENT || layer == BlockRenderLayer.SOLID)
-    }
+//    override fun canRenderInLayer(state: IBlockState, layer: BlockRenderLayer): Boolean {
+//        return (layer == BlockRenderLayer.TRANSLUCENT || layer == BlockRenderLayer.SOLID)
+//    }
 }
 
 object WallLamp: RotatableLamp("wall_lamp"){
